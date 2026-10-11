@@ -19,5 +19,8 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
-      - name: Correr tests
-        run: python -m pytest
+      - name: Correr tests con cobertura
+        run: coverage run -m pytest --junitxml=results.xml
+
+      - name: Verificar umbral de cobertura
+        run: coverage report --fail-under=80
