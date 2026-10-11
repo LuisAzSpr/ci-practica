@@ -9,3 +9,7 @@ def test_calcular_igv():
 def test_aplicar_descuento():
     assert aplicar_descuento(100, 10) == 90
 
+def test_calcular_igv():
+    assert calcular_igv(100) == 99
+
+    
